@@ -1,6 +1,4 @@
-# MetaWorks_Based_On_ECF_Framework
-
-# MetaWorks: A Multi-Marker Metabarcode Pipeline
+# Reproducing Bioinformatics Experiments: A Case Study Using the Environment Code-First Framework
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4741407.svg)](https://doi.org/10.5281/zenodo.7348131)  
 
