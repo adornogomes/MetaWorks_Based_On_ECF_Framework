@@ -1,6 +1,6 @@
 # Reproducing Bioinformatics Experiments: A Case Study Using the Environment Code-First Framework
 
-In this repository you can find the source code and the instructions to reproduce our experiments in regarding the paper: Reproducing Bioinformatics Experiments: A Case Study Using the Environment Code-First Framework.
+In this repository you can find the source code and the instructions to reproduce our experiments regarding the paper: Reproducing Bioinformatics Experiments: A Case Study Using the Environment Code-First Framework.
 
 ## Abstract
 
