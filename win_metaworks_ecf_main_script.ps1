@@ -41,8 +41,8 @@ VerifyAndInstallPackage 'vagrant'
 VerifyAndInstallPackage 'virtualbox'
 
 # Download the scripts from Github
-# Invoke-RestMethod -Uri https://raw.githubusercontent.com/adornogomes/MetaWorks_Based_On_ECF_Framework/main/Vagrantfile -OutFile Vagrantfile
-# Invoke-RestMethod -Uri https://raw.githubusercontent.com/adornogomes/MetaWorks_Based_On_ECF_Framework/main/metaworks_ecf.yml -OutFile metaworks_ecf.yml
+Invoke-RestMethod -Uri https://raw.githubusercontent.com/adornogomes/MetaWorks_Based_On_ECF_Framework/main/Vagrantfile -OutFile Vagrantfile
+Invoke-RestMethod -Uri https://raw.githubusercontent.com/adornogomes/MetaWorks_Based_On_ECF_Framework/main/metaworks_ecf.yml -OutFile metaworks_ecf.yml
 
 # Starting Vagrant
 vagrant up
