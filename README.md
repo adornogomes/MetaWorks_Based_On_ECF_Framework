@@ -31,7 +31,7 @@ Passo-a-passo da instalação do MetaWorks based on ECF Framework:
 
 		**> vagrant status**
 
-		The following result must be shown:
+   		<strong>The following result must be shown:<strong>
 
    		> vagrant status
 		Current machine states:
