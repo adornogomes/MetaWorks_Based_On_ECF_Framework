@@ -29,9 +29,9 @@ Passo-a-passo da instalação do MetaWorks based on ECF Framework:
 
 	6.1 To check if the VMM is running, use the following command:
 
-		**> vagrant status**
+   		> vagrant status
 
-   		<strong>The following result must be shown:<strong>
+   		The following result must be shown:
 
    		> vagrant status
 		Current machine states:
@@ -53,7 +53,7 @@ Passo-a-passo da instalação do MetaWorks based on ECF Framework:
 
 		The following information must be shown:
 
-		vagrant@ecf:~$ sudo docker container ps -a
+		vagrant@metaworks-ecf-vmm:~$ sudo docker container ps -a
 		CONTAINER ID   IMAGE                           COMMAND       CREATED        STATUS                     PORTS     NAMES
 		21a48b73857b   adornogomes/metaworks_ecf:1.0   "/bin/bash"   22 hours ago   Exited (0) 5 seconds ago             metaworks_ecf_container1
 
