@@ -49,7 +49,7 @@ $result = Invoke-Expression -Command "vagrant up"
 
 # Check the exit code of the command
 if ($LASTEXITCODE -eq 0) {
-    Write-Host "The MetaWorks VMM is up and running."
+    Write-Host "The MetaWorks Pipeline is up and running."
 } else {
     Write-Host "vagrant up failed."
 }
