@@ -12,8 +12,8 @@ Vagrant.configure("2") do |config|
   config.vm.box = "bento/ubuntu-22.04"
 
   # Define the hostname and the network
-  config.vm.define :ecf do |ecf_config|
-    ecf_config.vm.hostname = "ecf"
+  config.vm.define :metaworks_ecf_vmm do |ecf_config|
+    ecf_config.vm.hostname = "metaworks_ecf_vmm"
     ecf_config.vm.network :private_network,
                           :ip => "192.168.33.10"
 
