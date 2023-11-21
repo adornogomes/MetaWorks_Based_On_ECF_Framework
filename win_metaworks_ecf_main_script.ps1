@@ -44,8 +44,15 @@ VerifyAndInstallPackage 'virtualbox'
 Invoke-RestMethod -Uri https://raw.githubusercontent.com/adornogomes/MetaWorks_Based_On_ECF_Framework/main/Vagrantfile -OutFile Vagrantfile
 Invoke-RestMethod -Uri https://raw.githubusercontent.com/adornogomes/MetaWorks_Based_On_ECF_Framework/main/metaworks_ecf.yml -OutFile metaworks_ecf.yml
 
-# Starting Vagrant
-vagrant up
+# Run vagrant up command
+$result = Invoke-Expression -Command "vagrant up"
+
+# Check the exit code of the command
+if ($LASTEXITCODE -eq 0) {
+    Write-Host "The MetaWorks VMM is up and running."
+} else {
+    Write-Host "vagrant up failed."
+}
 
 
 
