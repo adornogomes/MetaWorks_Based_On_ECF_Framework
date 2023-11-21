@@ -15,11 +15,11 @@ Passo-a-passo da instalação do MetaWorks based on ECF Framework:
 
 1. Create a directory in your personal machine, and download the main script for MS Windows (win_metaworks_ecf_main_script.ps1) inside it.
 
-2. Open a Powershell terminal as Administrator, and access your new directory. The commands shown in the next steps must be run in this terminal.
+2. Open a Powershell terminal as Administrator and access your new directory. The commands shown in the next steps must be run in this terminal.
 
 3. Execute the main script by running the following command:
 
-	>.\win_metaworks_ecf_main_script.ps1
+	$ .\win_metaworks_ecf_main_script.ps1
 	
 4. The main script will install the package manager Chocolatey, the Vagrant, and the Virtualbox. If the installations are successful, the main script will start Vagrant.
 
