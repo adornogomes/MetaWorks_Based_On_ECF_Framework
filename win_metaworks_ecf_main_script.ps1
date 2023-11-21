@@ -45,7 +45,7 @@ Invoke-RestMethod -Uri https://raw.githubusercontent.com/adornogomes/MetaWorks_B
 Invoke-RestMethod -Uri https://raw.githubusercontent.com/adornogomes/MetaWorks_Based_On_ECF_Framework/main/metaworks_ecf.yml -OutFile metaworks_ecf.yml
 
 # Run vagrant up command
-$result = Invoke-Expression -Command "vagrant up"
+Invoke-Expression -Command "vagrant up"
 
 # Check the exit code of the command
 if ($LASTEXITCODE -eq 0) {
