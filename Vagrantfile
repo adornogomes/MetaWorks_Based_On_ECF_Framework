@@ -12,7 +12,7 @@ Vagrant.configure("2") do |config|
   config.vm.box = "bento/ubuntu-22.04"
 
   # Define the hostname and the network
-  config.vm.define :ecf do |ecf_config|
+  config.vm.define :metaworks_ecf_vmm do |ecf_config|
     ecf_config.vm.hostname = "metaworks-ecf-vmm"
     ecf_config.vm.network :private_network,
                           :ip => "192.168.33.10"
@@ -27,7 +27,7 @@ Vagrant.configure("2") do |config|
 	# and how many CPUs will be used on the VM
 	config.vm.provider "virtualbox" do |domain|
 		domain.memory = 8192
-		domain.cpus = 2
+		domain.cpus = 1
 	end
   end
 end
