@@ -19,7 +19,7 @@ Passo-a-passo da instalação do MetaWorks based on ECF Framework:
 
 3. Execute the main script by running the following command:
 
-	.\win_metaworks_ecf_main_script.ps1
+	>.\win_metaworks_ecf_main_script.ps1
 	
 4. The main script will install the package manager Chocolatey, the Vagrant, and the Virtualbox. If the installations are successful, the main script will start Vagrant.
 
