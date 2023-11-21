@@ -12,13 +12,13 @@ Vagrant.configure("2") do |config|
   config.vm.box = "bento/ubuntu-22.04"
 
   # Define the hostname and the network
-  config.vm.define :metaworks-ecf-vmm do |metaworks-ecf-vmm_config|
-    metaworks-ecf-vmm_config.vm.hostname = "metaworks-ecf-vmm"
-    metaworks-ecf-vmm_config.vm.network :private_network,
+  config.vm.define :metaworks.ecf.vmm do |metaworks.ecf.vmm_config|
+    metaworks.ecf.vmm_config.vm.hostname = "metaworks-ecf-vmm"
+    metaworks.ecf.vmm_config.vm.network :private_network,
                           :ip => "192.168.33.10"
 
     # Define the Ansible configuration
-    metaworks-ecf-vmm_config.vm.provision "ansible_local" do |ansible|
+    metaworks.ecf.vmm_config.vm.provision "ansible_local" do |ansible|
         ansible.playbook = "metaworks_ecf.yml"
         ansible.verbose = "vvv"
     end
