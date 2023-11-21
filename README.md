@@ -19,7 +19,7 @@ Passo-a-passo da instalação do MetaWorks based on ECF Framework:
 
 3. Execute the main script by running the following command:
 
-\> .\win_metaworks_ecf_main_script.ps1
+	.\win_metaworks_ecf_main_script.ps1
 	
 4. The main script will install the package manager Chocolatey, the Vagrant and the Virtualbox. If the installations have success, the main script will start Vagrant.
 
@@ -29,30 +29,32 @@ Passo-a-passo da instalação do MetaWorks based on ECF Framework:
 
 	6.1 To check if the VMM is running use the follwing command:
 
-	\> vagrant status
+		vagrant status
 
-	The following result must be shown:
+		The following result must be shown:
 
-	The name of the virtual machine that represents the VMM is "metaworks_ecf_vmm".
+		The name of the virtual machine that represents the VMM is "metaworks_ecf_vmm".
 
-6.1 To access the VMM, run the following command:
+	6.2 To access the VMM, run the following command:
 
-> vagrant ssh metaworks_ecf_vmm
+   		vagrant ssh metaworks_ecf_vmm
 
-If the command asks for a password, type: vagrant. After this, you will be inside the VMM that is a Ubuntu Linux OS.
+		If the command asks for a password, type: vagrant. After this, you will be inside the VMM that is a Ubuntu Linux OS.
 
 
-6.2 The Container Module (CM) that contains all the MetaWorks pipeline environment is up and running. To check the information about the CM use the following command:
+	6.3 The Container Module (CM) that contains the MetaWorks Pipeline environment is up and running. To check the information about the CM use the following command:
 
-$ sudo docker container ps -a
+		$ sudo docker container ps -a
 
-The following information must be shown:
+		The following information must be shown:
 
-<Inserir_Figura_Aqui>
+		vagrant@ecf:~$ sudo docker container ps -a
+		CONTAINER ID   IMAGE                           COMMAND       CREATED        STATUS                     PORTS     NAMES
+		21a48b73857b   adornogomes/metaworks_ecf:1.0   "/bin/bash"   22 hours ago   Exited (0) 5 seconds ago             metaworks_ecf_container1
 
-To access the CM run the following command:
+		To access the CM run the following command:
 
-$ sudo docker attach metaworks_ecf_container1
+		$ sudo docker attach metaworks_ecf_container1
 
 
 
