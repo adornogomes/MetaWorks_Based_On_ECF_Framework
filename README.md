@@ -29,7 +29,7 @@ Passo-a-passo da instalação do MetaWorks based on ECF Framework:
 
 	6.1 To check if the VMM is running, use the following command:
 
-		>vagrant status
+		> vagrant status
 
 		The following result must be shown:
 
@@ -37,7 +37,7 @@ Passo-a-passo da instalação do MetaWorks based on ECF Framework:
 
 	6.2 To access the VMM, run the following command:
 
-   		>vagrant ssh metaworks_ecf_vmm
+   		> vagrant ssh metaworks_ecf_vmm
 
 		If the command asks for a password, type vagrant. After this, you will be inside the VMM, a Ubuntu Linux OS.
 
