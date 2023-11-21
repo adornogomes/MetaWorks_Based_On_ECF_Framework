@@ -33,6 +33,12 @@ Passo-a-passo da instalação do MetaWorks based on ECF Framework:
 
 		The following result must be shown:
 
+		**> **vagrant **status
+		Current machine states:
+
+		**metaworks_ecf_vmm         **running **(virtualbox)
+
+
 		The name of the virtual machine that represents the VMM is "metaworks_ecf_vmm".
 
 	6.2 To access the VMM, run the following command:
