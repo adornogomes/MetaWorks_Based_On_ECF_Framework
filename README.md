@@ -56,6 +56,32 @@ Passo-a-passo da instalação do MetaWorks based on ECF Framework:
 
 		$ sudo docker attach metaworks_ecf_container1
 
+	6.4 Now, inside the Container Module (CM), run the following script to get more information on how to access the MetaWorks Pipeline environment and run a test:
+
+   		$ ./runme.sh
+
+   		The following information will be printed on the screen to guide the users:
+
+		#############################################################################################
+		#       The MetaWorks Computational Environment - Developed based on the ECF framework      #
+		#                                                                                           #
+		#  To certify the environment was properly installed and configured,                        #
+		#  follow the script below to run a test:                                                   #
+		#                                                                                           #
+		#  1. Access the MetaWorks directory:                                                       #
+		#                                                                                           #
+		#  $ cd MetaWorks1.12.0                                                                     #
+		#                                                                                           #
+		#  2. Activate Metaworks running the command:                                               #
+		#                                                                                           #
+		#  $ conda activate MetaWorks_v1.12.0                                                       #
+		#                                                                                           #
+		#  3. Run the following command:                                                            #
+		#                                                                                           #
+		#  $ snakemake --jobs 1 --snakefile snakefile_ESV --configfile config_testing_COI_data.yaml #
+		#                                                                                           #
+		#############################################################################################
+
 
 
 
