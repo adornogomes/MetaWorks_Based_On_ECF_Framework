@@ -29,15 +29,14 @@ Passo-a-passo da instalação do MetaWorks based on ECF Framework:
 
 	6.1 To check if the VMM is running, use the following command:
 
-		> vagrant status
+		**> vagrant status**
 
 		The following result must be shown:
 
-		**> **vagrant **status
+   		> vagrant status
 		Current machine states:
 
-		**metaworks_ecf_vmm         **running **(virtualbox)
-
+   		metaworks_ecf_vmm         running (virtualbox)
 
 		The name of the virtual machine that represents the VMM is "metaworks_ecf_vmm".
 
