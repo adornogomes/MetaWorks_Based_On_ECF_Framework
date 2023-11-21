@@ -19,7 +19,7 @@ Passo-a-passo da instalação do MetaWorks based on ECF Framework:
 
 3. Execute the main script by running the following command:
 
-> .\win_metaworks_ecf_main_script.ps1
+\> .\win_metaworks_ecf_main_script.ps1
 	
 4. The main script will install the package manager Chocolatey, the Vagrant and the Virtualbox. If the installations have success, the main script will start Vagrant.
 
@@ -27,13 +27,13 @@ Passo-a-passo da instalação do MetaWorks based on ECF Framework:
 
 6. From this point, we can access the environment and run a test in the MetaWorks pipeline:
 
-6.1 To check if the VMM is running use the follwing command:
+	6.1 To check if the VMM is running use the follwing command:
 
-> vagrant status
+	\> vagrant status
 
-The following result must be shown:
+	The following result must be shown:
 
-The name of the virtual machine that represents the VMM is "metaworks_ecf_vmm".
+	The name of the virtual machine that represents the VMM is "metaworks_ecf_vmm".
 
 6.1 To access the VMM, run the following command:
 
