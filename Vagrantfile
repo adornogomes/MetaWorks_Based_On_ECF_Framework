@@ -13,7 +13,7 @@ Vagrant.configure("2") do |config|
 
   # Define the hostname and the network
   config.vm.define :ecf do |ecf_config|
-    ecf_config.vm.hostname = "metaworks_ecf_vmm"
+    ecf_config.vm.hostname = "metaworks-ecf-vmm"
     ecf_config.vm.network :private_network,
                           :ip => "192.168.33.10"
 
