@@ -87,6 +87,18 @@ Step-by-step installation of the MetaWorks Pipeline based on ECF Framework on MS
 		#                                                                                           #
 		#############################################################################################
 
+7. After running the main script for the first time, there is no need to run it again. All the software needed to support the environment was already installed. To manage the VMM we have to use the following Vagrant commands:
+
+	**- Vagrant status:** Run this command to check the current status of the VMM.
+
+	**- Vagrant suspend:** This command will put the VMM in hibernate mode.
+
+	**- Vagrant halt:** This command will shut down the VMM.
+
+	**- Vagrant destroy:** This command will remove the entire computational environment.
+
+	**- Vagrant up:** This command will create the entire computational environment. After running the options suspend, halt, or destroy, it is necessary to run this command.
+
 
 ## How do you provision the MetaWorks Pipeline on Linux (Ubuntu and Fedora)?
 
