@@ -44,7 +44,7 @@ Step-by-step installation of the MetaWorks Pipeline based on ECF Framework on MS
 
    		> vagrant ssh metaworks_ecf_vmm
 
-		If the command asks for a password, type vagrant. After this, you will be inside the VMM, a Ubuntu Linux OS.
+		If the command asks for a password, type vagrant. After this, you will be inside the VMM, a Ubuntu Linux OS. To leave the VMM use the command "exit".
 
 
 	6.3 The Container Module (CM) that contains the MetaWorks Pipeline environment is up and running. To check the information about the CM, use the following command:
@@ -87,7 +87,9 @@ Step-by-step installation of the MetaWorks Pipeline based on ECF Framework on MS
 		#                                                                                           #
 		#############################################################################################
 
-7. After running the main script for the first time, there is no need to run it again. All the software needed to support the environment was already installed. To manage the VMM we have to use the following Vagrant commands:
+		 To leave the CM use the command "exit".
+
+8. After running the main script for the first time, there is no need to run it again. All the software needed to support the environment was already installed. To manage the VMM we have to use the following Vagrant commands:
 
 	**- Vagrant status:** Run this command to check the current status of the VMM.
 
