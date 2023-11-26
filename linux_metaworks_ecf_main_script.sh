@@ -75,7 +75,12 @@ VerifyAndInstallVirtualbox6() {
     elif [ -f /etc/redhat-release ]; then
         if ! rpm -q "$package" >/dev/null 2>&1; then
             echo "$package is not installed. Installing $package..."
-            sudo dnf install -y "$package"
+            
+            # Download and register the Oracle public key for verifying the signatures
+            wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | rpm --import -
+
+            # Install VirtualBox 6
+             sudo dnf install -y virtualbox-6.1
             
             if [ $? -eq 0 ]; then
                 echo "$package was installed successfully."
