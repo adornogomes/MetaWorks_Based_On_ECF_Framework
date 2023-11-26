@@ -77,8 +77,8 @@ VerifyAndInstallVirtualbox6() {
             echo "$package is not installed. Installing $package..."
             
             # Download and register the Oracle public key for verifying the signatures
-            wget -q https://www.virtualbox.org/download/oracle_vbox.asc
-            sudo rpm --import oracle_vbox.asc
+            wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc
+            sudo rpm --import oracle_vbox_2016.asc
             # wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | rpm --import -
 
             echo "[VirtualBox]" | sudo tee -a /etc/yum.repos.d/virtualbox.repo > /dev/null
