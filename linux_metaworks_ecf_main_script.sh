@@ -42,7 +42,7 @@ VerifyAndInstallPackage() {
 }
 
 VerifyAndInstallVirtualbox6() {
-    package='virtualBox'
+    package='virtualbox'
 
     # Check if the system is Ubuntu (based on the presence of /etc/apt/sources.list)
     if [ -f /etc/apt/sources.list ]; then
@@ -111,7 +111,7 @@ VerifyAndInstallVirtualbox6() {
 VerifyAndInstallPackage 'vagrant'
 
 # Verify and install VirtualBox based on the distribution
-VerifyAndInstallVirtualbox7
+VerifyAndInstallVirtualbox6
 
 # Download the scripts from Github
 wget https://raw.githubusercontent.com/adornogomes/MetaWorks_Based_On_ECF_Framework/main/Vagrantfile -O Vagrantfile
