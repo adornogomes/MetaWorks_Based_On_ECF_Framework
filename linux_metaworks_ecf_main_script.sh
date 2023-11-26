@@ -75,6 +75,8 @@ VerifyAndInstallVirtualbox6() {
     elif [ -f /etc/redhat-release ]; then
         if ! rpm -qa | grep "$package" >/dev/null 2>&1; then
             echo "$package is not installed. Installing $package..."
+            $releasever='34'
+            $basearch='x86_64'
             
             # Download and register the Oracle public key for verifying the signatures
             wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc
@@ -87,7 +89,7 @@ VerifyAndInstallVirtualbox6() {
             echo "enabled=1" | sudo tee -a /etc/yum.repos.d/virtualbox.repo > /dev/null
             echo "gpgcheck=1" | sudo tee -a /etc/yum.repos.d/virtualbox.repo > /dev/null
             echo "repo_gpgcheck=1" | sudo tee -a /etc/yum.repos.d/virtualbox.repo > /dev/null
-            echo "gpgkey=https://www.virtualbox.org/download/oracle_vbox.asc" | sudo tee -a /etc/yum.repos.d/virtualbox.repo > /dev/null
+            echo "gpgkey=https://www.virtualbox.org/download/oracle_vbox_2016.asc" | sudo tee -a /etc/yum.repos.d/virtualbox.repo > /dev/null
 
             # Install VirtualBox 6
              sudo dnf install VirtualBox-6.1 -y
