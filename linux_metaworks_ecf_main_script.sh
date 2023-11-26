@@ -43,6 +43,8 @@ VerifyAndInstallPackage() {
 
 VerifyAndInstallVirtualbox6() {
     package='virtualbox'
+    releasever='34'
+    basearch='x86_64'
 
     # Check if the system is Ubuntu (based on the presence of /etc/apt/sources.list)
     if [ -f /etc/apt/sources.list ]; then
@@ -75,8 +77,6 @@ VerifyAndInstallVirtualbox6() {
     elif [ -f /etc/redhat-release ]; then
         if ! rpm -qa | grep "$package" >/dev/null 2>&1; then
             echo "$package is not installed. Installing $package..."
-            releasever='34'
-            basearch='x86_64'
             
             # Download and register the Oracle public key for verifying the signatures
             wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc
