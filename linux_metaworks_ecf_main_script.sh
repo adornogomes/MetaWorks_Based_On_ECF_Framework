@@ -92,7 +92,7 @@ VerifyAndInstallVirtualbox6() {
             echo "gpgkey=https://www.virtualbox.org/download/oracle_vbox_2016.asc" | sudo tee -a /etc/yum.repos.d/virtualbox.repo > /dev/null
 
             # Install VirtualBox 6
-             sudo dnf install VirtualBox-6.1 -y
+             sudo dnf install -y VirtualBox-6.1
             
             if [ $? -eq 0 ]; then
                 echo "$package was installed successfully."
