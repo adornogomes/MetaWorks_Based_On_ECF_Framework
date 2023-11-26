@@ -48,15 +48,25 @@ VerifyAndInstallVirtualbox7() {
     if [ -f /etc/apt/sources.list ]; then
         if ! dpkg -s "$package" >/dev/null 2>&1; then
             echo "$package is not installed. Installing $package..."
-            
-            # Install required packages to enable VirtualBox installation
-            sudo apt-get install -y apt-transport-https ca-certificates curl software-properties-common
 
-            # Download and add the Oracle VirtualBox repository key
-            curl -fsSL https://www.virtualbox.org/download/oracle_vbox_2016.asc | sudo apt-key add -
+            # sudo -s -H
+            # apt-get clean
+            # rm /var/lib/apt/lists/*
+            # rm /var/lib/apt/lists/partial/*
+            # apt-get clean
+            # apt-get update
+            # sudo apt-key remove 5CDFA2F683C52980AECF
+            # sudo apt-key remove D9C954422A4B98AB5139
+            
+            # Add the following line to your /etc/apt/sources.list
+            line_to_add="deb [arch=amd64 signed-by=/usr/share/keyrings/oracle-virtualbox-2016.gpg] https://download.virtualbox.org/virtualbox/debian <mydist> contrib"
+            echo "$line_to_add" | sudo tee -a /etc/apt/sources.list > /dev/null
+
+            # Download and register the Oracle public key for verifying the signatures
+            wget -O- https://www.virtualbox.org/download/oracle_vbox_2016.asc | sudo gpg --dearmor --yes --output /usr/share/keyrings/oracle-virtualbox-2016.gpg
 
             # Add the VirtualBox repository to your system
-            sudo add-apt-repository "deb [arch=amd64] https://download.virtualbox.org/virtualbox/debian $(lsb_release -cs) contrib"
+            # sudo add-apt-repository "deb [arch=amd64] https://download.virtualbox.org/virtualbox/debian $(lsb_release -cs) contrib"
 
             # Update the package lists again to include the VirtualBox repository
             sudo apt-get update
@@ -66,7 +76,7 @@ VerifyAndInstallVirtualbox7() {
 
             # Optionally, you can add a user to the 'vboxusers' group to enable access to USB and other devices
             # Replace 'username' with your actual username
-            sudo usermod -aG vboxusers username
+            # sudo usermod -aG vboxusers username
             
             if [ $? -eq 0 ]; then
                 echo "$package was installed successfully."
