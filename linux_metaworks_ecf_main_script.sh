@@ -46,7 +46,7 @@ VerifyAndInstallVirtualbox7() {
 
     # Check if the system is Ubuntu (based on the presence of /etc/apt/sources.list)
     if [ -f /etc/apt/sources.list ]; then
-        if ! dpkg -s "$package" >/dev/null 2>&1; then
+        if ! dpkg -l | grep "$package" >/dev/null 2>&1; then
             echo "$package is not installed. Installing $package..."
 
             # sudo -s -H
@@ -71,8 +71,8 @@ VerifyAndInstallVirtualbox7() {
             # Update the package lists again to include the VirtualBox repository
             sudo apt-get update
 
-            # Install VirtualBox 7
-            sudo apt-get install -y virtualbox-7.0
+            # Install VirtualBox 6
+            sudo apt-get install -y virtualbox-6.0
 
             # Optionally, you can add a user to the 'vboxusers' group to enable access to USB and other devices
             # Replace 'username' with your actual username
