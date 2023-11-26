@@ -73,14 +73,24 @@ VerifyAndInstallVirtualbox6() {
         fi
     # Check if the system is Fedora (based on the presence of /etc/redhat-release)
     elif [ -f /etc/redhat-release ]; then
-        if ! rpm -q "$package" >/dev/null 2>&1; then
+        if ! rpm -qa | grep "$package" >/dev/null 2>&1; then
             echo "$package is not installed. Installing $package..."
             
             # Download and register the Oracle public key for verifying the signatures
-            wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | rpm --import -
+            wget -q https://www.virtualbox.org/download/oracle_vbox.asc
+            sudo rpm --import oracle_vbox.asc
+            # wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | rpm --import -
+
+            echo "[VirtualBox]" | sudo tee -a /etc/yum.repos.d/virtualbox.repo > /dev/null
+            echo "name=Fedora $releasever - $basearch - VirtualBox" | sudo tee -a /etc/yum.repos.d/virtualbox.repo > /dev/null
+            echo "baseurl=http://download.virtualbox.org/virtualbox/rpm/fedora/$releasever/$basearch" | sudo tee -a /etc/yum.repos.d/virtualbox.repo > /dev/null
+            echo "enabled=1" | sudo tee -a /etc/yum.repos.d/virtualbox.repo > /dev/null
+            echo "gpgcheck=1" | sudo tee -a /etc/yum.repos.d/virtualbox.repo > /dev/null
+            echo "repo_gpgcheck=1" | sudo tee -a /etc/yum.repos.d/virtualbox.repo > /dev/null
+            echo "gpgkey=https://www.virtualbox.org/download/oracle_vbox.asc" | sudo tee -a /etc/yum.repos.d/virtualbox.repo > /dev/null
 
             # Install VirtualBox 6
-             sudo dnf install -y virtualbox-6.1
+             sudo dnf install VirtualBox-6.1 -y
             
             if [ $? -eq 0 ]; then
                 echo "$package was installed successfully."
