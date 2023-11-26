@@ -42,7 +42,7 @@ VerifyAndInstallPackage() {
 }
 
 VerifyAndInstallVirtualbox7() {
-    package='VirtualBox'
+    package='virtualBox'
 
     # Check if the system is Ubuntu (based on the presence of /etc/apt/sources.list)
     if [ -f /etc/apt/sources.list ]; then
