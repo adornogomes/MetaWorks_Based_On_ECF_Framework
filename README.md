@@ -1,7 +1,7 @@
 # INCREASING THE REPRODUCIBILITY OF SCIENTIFIC RESEARCH WORKS: A CASE STUDY USING THE ENVIRONMENT CODE-FIRST FRAMEWORK
 
 This repository contains the source code produced during our experiments that supported the development of the paper: "INCREASING THE REPRODUCIBILITY OF SCIENTIFIC RESEARCH WORKS: A CASE STUDY USING THE ENVIRONMENT CODE-FIRST FRAMEWORK".
-The preprint of the paper can be downloaded from https://www.preprints.org/manuscript/202310.0102/v1
+The paper can be downloaded from https://openaccessojs.com/JBReview/article/view/4662
 
 ## Abstract
 
