@@ -1,4 +1,4 @@
-# Reproducing Bioinformatics Experiments: A Case Study Using the Environment Code-First Framework
+# INCREASING THE REPRODUCIBILITY OF SCIENTIFIC RESEARCH WORKS: A CASE STUDY USING THE ENVIRONMENT CODE-FIRST FRAMEWORK
 
 This repository contains the source code produced during our experiments that supported the development of the paper: "Reproducing Bioinformatics Experiments: A Case Study Using the Environment Code-First Framework".
 The preprint of the paper can be downloaded from https://www.preprints.org/manuscript/202310.0102/v1
