@@ -15,7 +15,7 @@ Vagrant.configure("2") do |config|
   config.vm.define :metaworks_ecf_vmm do |ecf_config|
     ecf_config.vm.hostname = "metaworks-ecf-vmm"
     ecf_config.vm.network :private_network,
-                          :ip => "192.168.33.10"
+                          :ip => "192.168.56.10"
 
     # Define the Ansible configuration
     ecf_config.vm.provision "ansible_local" do |ansible|
